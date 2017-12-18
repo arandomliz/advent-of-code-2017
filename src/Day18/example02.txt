@@ -1,0 +1,7 @@
+set a 1
+set b 10
+add a b
+add b -5
+snd a
+jgz b -3
+rcv a
