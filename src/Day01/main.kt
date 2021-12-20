@@ -5,16 +5,13 @@ import java.io.File
 val src = "src/Day01/"
 
 fun main(args : Array<String>) {
-    println(solution2(content = "1212"))
-    println(solution2(content = "1221"))
-    println(solution2(content = "123425"))
-    println(solution2(content = "123123"))
-    println(solution2(content = "12131415"))
-    println(solution2(fileName = src + "Day18/input.txt"))
+    println(solution1(content = "91212129"))
+    println(solution1(fileName = src + "input-new.txt"))
+    println(solution2(fileName = src + "input-new.txt"))
 }
 
 fun solution1(fileName : String = "", content : String = "") : Int {
-    val text = (if (fileName.isNotEmpty()) File(fileName).readText() else content).toCharArray()
+    val text = (if (fileName.isNotEmpty()) File(fileName).readText() else content).trim().toCharArray()
 
     val out = text.filterIndexed { index, c ->
         val i = when(index) {
@@ -28,7 +25,7 @@ fun solution1(fileName : String = "", content : String = "") : Int {
 }
 
 fun solution2(fileName : String = "", content : String = "") : Int {
-    val text = (if (fileName.isNotEmpty()) File(fileName).readText() else content).toCharArray()
+    val text = (if (fileName.isNotEmpty()) File(fileName).readText() else content).trim().toCharArray()
 
     val out = text.filterIndexed { index, c ->
         val i = (index + text.size / 2) % text.size
