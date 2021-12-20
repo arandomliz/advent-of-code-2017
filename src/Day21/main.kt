@@ -27,9 +27,9 @@ val src = "src/Day21/"
 
 fun main(args : Array<String>) {
     assertEquals(12, solution1(File(src + "example.txt"), iterations = 2))
-    println(solution1(File(src + "input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 
-    println(solution1(File(src + "input.txt"), iterations = 18))
+    println(solution1(File(src + "input-new.txt"), iterations = 18))
 }
 
 fun solution1(ruleFile : File, iterations : Int = 5) : Int {

@@ -12,13 +12,13 @@ fun main(args : Array<String>) {
     assertEquals(0, solution(content = "ne,ne,sw,sw").requiredSteps)
     assertEquals(2, solution(content = "ne,ne,s,s").requiredSteps)
     assertEquals(3, solution(content = "se,sw,se,sw,sw").requiredSteps)
-    println(solution(File(src + "Day18/input.txt")))
+    println(solution(File(src + "input-new.txt")))
 }
 
 data class ReturnValue(val requiredSteps : Int, val maxDistance : Int)
 
 fun solution(file : File? = null, content : String = "") : ReturnValue {
-    val input = (file?.readText() ?: content).split("""(, |,)""".toRegex())
+    val input = (file?.readText() ?: content).trim().split("""(, |,)""".toRegex())
 
     /** s -> - and n -> + **/
     var ns = 0

@@ -8,14 +8,14 @@ val src = "src/Day16/"
 
 fun main(args : Array<String>) {
     assertEquals("baedc", solution(content = "s1,x3/4,pe/b", length = 5, debug = true))
-    println(solution(File(src + "Day18/input.txt")))
+    println(solution(File(src + "input-new.txt")))
 
     // assertEquals("baedc", solution2(content = "s1,x3/4,pe/b", length = 5))
-    println(solution2(File(src + "Day18/input.txt")))
+    println(solution2(File(src + "input-new.txt")))
 }
 
 fun solution(file : File? = null, content : String = "", length : Int = 16, debug : Boolean = false) : String {
-    val cmd = (file?.readText() ?: content).split(",")
+    val cmd = (file?.readText() ?: content).trim().split(",")
     var prgms = (0 until length).map { (it + 97).toChar() }.toTypedArray()
 
     if (debug)
@@ -60,7 +60,7 @@ fun solution(file : File? = null, content : String = "", length : Int = 16, debu
 val ONE_BILLION = 1_000_000_000
 
 fun solution2(file : File? = null, content : String = "", length : Int = 16, times : Int = ONE_BILLION) : String {
-    val cmd = (file?.readText() ?: content).split(",")
+    val cmd = (file?.readText() ?: content).trim().split(",")
     val start = (0 until length).map { (it + 97).toChar() }.toTypedArray()
     var prgms = start.clone()
 

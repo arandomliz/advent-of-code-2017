@@ -4,8 +4,7 @@ import kotlin.test.assertEquals
 
 fun main(args : Array<String>) {
     assertEquals(638, solution1(3))
-    println(solution1(359))
-
+    println(solution1(359))  // new & old
     println(solution2(359))
 }
 

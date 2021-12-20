@@ -23,7 +23,7 @@ fun main(args : Array<String>) {
     assertEquals(0, solution1(input = "<!!!>>").removedCharacters)
     assertEquals(10, solution1(input = "<{o\"i!a,<{i<a>").removedCharacters)
 
-    println(solution1(File(src + "Day18/input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 }
 
 data class SolutionReturnValue(val score : Int, val removedCharacters : Int)

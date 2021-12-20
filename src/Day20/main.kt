@@ -8,16 +8,16 @@ val src = "src/Day20/"
 
 fun main(args : Array<String>) {
     assertEquals(0, solution1(File(src + "example01.txt")))
-    println(solution1(File(src + "input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 
     assertEquals(1, solution2(File(src + "example02.txt")))
-    println(solution2(File(src + "input.txt")))
+    println(solution2(File(src + "input-new.txt")))
 }
 
 fun solution1(file : File) : Int {
     val particles = file.readLines().mapIndexed { index, s -> Particle(s, index) }
     repeat(10_000, { particles.forEach { it.iterate() } })
-    return particles.minBy { it.distanceFromOrigin() }?.id ?: -1
+    return particles.minByOrNull { it.distanceFromOrigin() }?.id ?: -1
 }
 
 fun solution2(file : File) : Int {

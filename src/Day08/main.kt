@@ -7,7 +7,7 @@ val src = "src/Day08/"
 
 fun main(args : Array<String>) {
     println(solution1(File(src + "example01.txt")))
-    println(solution1(File(src + "Day18/input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 }
 
 enum class IncDec {
@@ -49,5 +49,5 @@ fun solution1(file : File) : SolutionReturnValue {
         }
     }
 
-    return SolutionReturnValue(registers.maxBy { it.value }!!.value, highestEver)
+    return SolutionReturnValue(registers.maxByOrNull { it.value }!!.value, highestEver)
 }

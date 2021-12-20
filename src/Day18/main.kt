@@ -10,10 +10,10 @@ val src = "src/Day18/"
 fun main(args : Array<String>) {
     assertEquals(4, solution1(File(src + "example01.txt")))
     assertEquals(16, solution1(File(src + "example02.txt")))
-    println(solution1(File(src + "input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 
     //println(solution2_2(File(src + "example03.txt")))
-    println(solution2_2(File(src + "input.txt")))
+    println(solution2_2(File(src + "input-new.txt")))
     //solution2(File(src + "input.txt"))
 }
 

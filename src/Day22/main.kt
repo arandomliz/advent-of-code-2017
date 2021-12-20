@@ -10,11 +10,11 @@ fun main(args : Array<String>) {
     // solution1(File(src + "example.txt"), iterations = 880)
     assertEquals(41, solution1(File(src + "example.txt"), iterations = 70))
     assertEquals(5587, solution1(File(src + "example.txt")))
-    println(solution1(File(src + "input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 
     assertEquals(26, solution2(File(src + "example.txt"), iterations = 100))
     assertEquals(2511944, solution2(File(src + "example.txt")))
-    println(solution2(File(src + "input.txt")))
+    println(solution2(File(src + "input-new.txt")))
 
 }
 

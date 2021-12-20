@@ -4,10 +4,12 @@ import kotlin.test.assertEquals
 
 fun main(args : Array<String>) {
     assertEquals(588, solution1(65, 8921))
-    println(solution1(722, 354))
+    println(solution1(722, 354))  // old input
+    println(solution1(634, 301))  // new input
 
     assertEquals(309, solution2(65, 8921))
-    println(solution2(722, 354))
+    println(solution2(722, 354))  // old input
+    println(solution2(634, 301))  // new input
 }
 
 fun solution1(startA : Int, startB : Int) : Int {

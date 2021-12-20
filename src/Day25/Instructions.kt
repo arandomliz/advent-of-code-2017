@@ -42,3 +42,31 @@ fun getInstructionsInput() = Instructions('A', 12134527,
                         Triple(true, 1, 'E')
                 ))
         ))
+
+fun getInstructionsInputNew() = Instructions('A', 12523873,
+        mapOf(
+                Pair('A', Pair(
+                        Triple(true, 1, 'B'),
+                        Triple(true, -1, 'E')
+                )),
+                Pair('B', Pair(
+                        Triple(true, 1, 'C'),
+                        Triple(true, 1, 'F')
+                )),
+                Pair('C', Pair(
+                        Triple(true, -1, 'D'),
+                        Triple(false, 1, 'B')
+                )),
+                Pair('D', Pair(
+                        Triple(true, 1, 'E'),
+                        Triple(false, -1, 'C')
+                )),
+                Pair('E', Pair(
+                        Triple(true, -1, 'A'),
+                        Triple(false, 1, 'D')
+                )),
+                Pair('F', Pair(
+                        Triple(true, 1, 'A'),
+                        Triple(true, 1, 'C')
+                ))
+        ))

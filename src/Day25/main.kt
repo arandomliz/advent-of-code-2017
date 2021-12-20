@@ -9,7 +9,7 @@ val src = "src/Day25/"
 
 fun main(args : Array<String>) {
     assertEquals(3, solution1(getInstructionsExample()))
-    println(solution1(getInstructionsInput()))
+    println(solution1(getInstructionsInputNew()))
 }
 
 fun solution1(insts : Instructions) : Int {
@@ -30,6 +30,7 @@ fun solution1(insts : Instructions) : Int {
     return ram.countTrue()
 }
 
+/*
 fun m6277a(bArr:ByteArray):String {
     val cArr = CharArray((bArr.size * 2))
     for (i in bArr.indices)
@@ -40,3 +41,4 @@ fun m6277a(bArr:ByteArray):String {
     }
     return String(cArr)
 }
+*/

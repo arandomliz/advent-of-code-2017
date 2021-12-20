@@ -15,18 +15,18 @@ fun IntArray.reverseLoopedArray(position : Int, length : Int) {
 
 fun main(args : Array<String>) {
     assertEquals(12, solution1(content = "3, 4, 1, 5", size = 5))
-    println("Solution 1: ${solution1(file = File(src + "Day18/input.txt"))}")
+    println("Solution 1: ${solution1(file = File(src + "input-new.txt"))}")
 
     assertEquals("a2582a3a0e66e6e86e3812dcb672a272", solution2(content = ""))
     assertEquals("33efeb34ea91902bb2f59c9920caa6cd", solution2(content = "AoC 2017"))
     assertEquals("3efbe78a8d82f29979031a4aa0b16a9d", solution2(content = "1,2,3"))
     assertEquals("63960835bcdc130f0b66d7ff4f6a5a8e", solution2(content = "1,2,4"))
-    println("Solution 1: ${solution2(file = File(src + "Day18/input.txt"))}")
+    println("Solution 2: ${solution2(file = File(src + "input-new.txt"))}")
 }
 
 
 fun solution1(file : File? = null, content : String = "", size : Int = 256) : Int {
-    val sequence = (file?.readText() ?: content).split("""(, |,)""".toRegex()).map { it.toInt() }
+    val sequence = (file?.readText() ?: content).trim().split("""(, |,)""".toRegex()).map { it.toInt() }
     val string = IntArray(size, {i -> i})
 
     var pos = 0
@@ -41,7 +41,7 @@ fun solution1(file : File? = null, content : String = "", size : Int = 256) : In
 }
 
 fun solution2(file : File? = null, content : String = "", size : Int = 256) : String {
-    val sequence = (file?.readText() ?: content).toByteArray() +
+    val sequence = (file?.readText() ?: content).trim().toByteArray() +
             byteArrayOf(17, 31, 73, 47, 23)  // static ending
 
     val string = IntArray(size, {i -> i})

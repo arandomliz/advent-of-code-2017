@@ -2,7 +2,6 @@ package Day19
 
 import javafx.geometry.Pos
 import java.io.File
-import kotlin.coroutines.experimental.buildIterator
 import kotlin.test.assertEquals
 
 var src = "src/Day19/"
@@ -10,7 +9,7 @@ var src = "src/Day19/"
 fun main(args: Array<String>) {
     assertEquals("ABCDEF", solution1(File(src + "example.txt")).first)
     assertEquals(38, solution1(File(src + "example.txt")).second)
-    println(solution1(File(src + "input.txt")))
+    println(solution1(File(src + "input-new.txt")))
 }
 
 fun solution1(file: File) : Pair<String, Int> {
