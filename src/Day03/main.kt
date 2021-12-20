@@ -54,5 +54,12 @@ fun solution1(square : Int = 347991) : Int {
 
 
 fun solution2(square : Int) : Int {
+    /* The descriped rows of numbers has the
+    oeis entry A141481.
+
+    Just take your given input, search the list
+    of numbers for the next largest one and enter
+    that into the input field. Done
+     */
     TODO("See https://oeis.org/a141481")
 }
