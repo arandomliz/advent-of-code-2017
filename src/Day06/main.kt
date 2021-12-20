@@ -8,7 +8,7 @@ fun main(args : Array<String>) {
     println(solution1(content = "0 2 7 0"))
     println(solutionFast(content = "0 2 7 0"))
     // println(solution1(File(src + "input.txt")))
-    println(solutionFast(File(src + "Day18/input.txt")))
+    println(solutionFast(File(src + "input-new.txt")))
 }
 
 fun Boolean.toInt() = if (this) 1 else 0
@@ -20,7 +20,7 @@ fun solution1(file : File? = null, content : String = "") : Pair<Int, Int> {
     do {
         history += banks.copyOf()
 
-        val bIndex = banks.withIndex().maxBy { it.value }!!.index
+        val bIndex = banks.withIndex().maxByOrNull { it.value }!!.index
 
         /* [. . # .] = 6 (index = 2)
         b: [2 1 1 2]
@@ -48,13 +48,13 @@ fun solution1(file : File? = null, content : String = "") : Pair<Int, Int> {
 }
 
 fun solutionFast(file : File? = null, content : String = "") : Pair<Int, Int> {
-    var banks = (file?.readText() ?: content).split("[\t ]+".toRegex()).map { it.toInt() }.toIntArray()
+    var banks = (file?.readText() ?: content).trim().split("[\t ]+".toRegex()).map { it.toInt() }.toIntArray()
     val history = HashMap<Int, Int>()  // <-- Due to this beauty
 
     do {
         history.put(banks.contentHashCode(), history.size)
 
-        val bIndex = banks.withIndex().maxBy { it.value }!!.index
+        val bIndex = banks.withIndex().maxByOrNull { it.value }!!.index
 
         banks = banks.mapIndexed { i, value ->
             val v = (i - bIndex + (i <= bIndex).toInt() * banks.size)

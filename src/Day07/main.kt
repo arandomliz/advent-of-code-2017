@@ -7,7 +7,8 @@ val src = "src/Day07/"
 fun main(args : Array<String>) {
     println(solution1(File(src + "example01.txt")))
     println(solution2(File(src + "example01.txt")))
-    println(solution2(File(src + "Day18/input.txt")))
+    println(solution1(File(src + "input-new.txt")))
+    println(solution2(File(src + "input-new.txt")))
 }
 
 fun solution1(file : File) : String {
@@ -72,6 +73,18 @@ fun solution2(file : File) : String {
 
         }
     }
+
+    /* On how to read the output
+    This algorithm will return a list of unbalanced
+    programs although those programs are not necessarily
+    the leafs. You will need to look through the input file
+    to find the actual leaf node that is too heavy.
+
+    You should first find the root (one of the output ones are
+    root), find the number in the list that is unbalanced and
+    see which one from the output that is according to the input
+    file. And so until you reach a leaf that has the wrong weight.
+    */
 
     return ""
 }

@@ -5,8 +5,8 @@ import java.io.File
 val src = "src/Day05/"
 
 fun main(args : Array<String>) {
-    // println(solution1(src + "input.txt"))
-    println(solution2(src + "Day18/input.txt"))
+    println(solution1(src + "input-new.txt"))
+    println(solution2(src + "input-new.txt"))
 }
 
 fun solution1(fileName : String = "") : Int {

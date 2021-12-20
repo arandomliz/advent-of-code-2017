@@ -1,5 +1,6 @@
 package Day03
 
+import Day02.src
 import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.floor
@@ -15,7 +16,9 @@ fun main(args : Array<String>) {
     println(solution1(23))
     println(solution1(15))*/
     // println(solution1(1024))
-    println(solution1())
+    println(solution1(square = 347991))
+    println(solution1(square = 277678))
+
 }
 
 /**
@@ -51,5 +54,5 @@ fun solution1(square : Int = 347991) : Int {
 
 
 fun solution2(square : Int) : Int {
-    TODO("See https://oeis.org/A141481")
+    TODO("See https://oeis.org/a141481")
 }

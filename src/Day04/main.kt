@@ -9,10 +9,10 @@ fun main(args : Array<String>) {
     println(solution1(content = "aa bb cc dd aa"))
     println(solution1(content = "aa bb cc dd aaa"))
     println(solution1(content = "bb cc  aa dd ee"))
-    println(solution1(fileName = src + "Day18/input.txt"))
+    println(solution1(fileName = src + "input-new.txt"))
 
     println(solution2(content = "aa bb cc dd ee\naa bb cc dd aa\naa bb cc dd aaa\nbb cc  aa dd ee"))
-    println(solution2(fileName = src + "Day18/input.txt"))
+    println(solution2(fileName = src + "input-new.txt"))
 }
 
 fun solution1(fileName : String = "", content : String = "") : Int {
