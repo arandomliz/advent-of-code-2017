@@ -6,7 +6,6 @@ val src = "src/Day23/"
 
 fun main(args : Array<String>) {
     println(solution1(File(src + "input-new.txt")))
-    println(solution2(File(src + "input-new.txt")))
     // println(solution2(File(src + "test.txt")))
     // println(solution2(File(src + "efficient.txt")))
 }
