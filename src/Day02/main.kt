@@ -6,7 +6,8 @@ val src = "src/Day02/"
 
 fun main(args : Array<String>) {
     println(solution2(src + "example02.txt"))
-    println(solution2(src + "Day18/input.txt"))
+    println(solution1(src + "input-new.txt"))
+    println(solution2(src + "input-new.txt"))
 }
 
 fun solution1(fileName : String) : Int {
@@ -17,7 +18,7 @@ fun solution1(fileName : String) : Int {
 
         when {
             ns.isEmpty() -> 0
-            else -> ns.max()!! - ns.min()!!
+            else -> ns.maxOrNull()!! - ns.minOrNull()!!
         }
     }
 }
